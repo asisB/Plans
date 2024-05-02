@@ -50,4 +50,6 @@ export const getIsUserSigned = ({
 }: {
   application: IApplication;
 }) => application.accountStatus === AccountStatus.SIGNED_IN;
+
+
 export default applicationSlice.reducer;
