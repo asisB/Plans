@@ -9,23 +9,47 @@ const Stack = createNativeStackNavigator<AppStackParamList>();
 const { Navigator, Screen } = Stack;
 
 const AppNavigator = () => {
-    return(
-        <Navigator 
-        screenOptions={{
-            headerShown: false, 
-            contentStyle: {
-                backgroundColor: "red"
-            }
-        }}
-        >
-
-            <Screen 
-            name={AppNavScreenList.BOTTOM_TAB_NAV}
-            component={TabsNavigator}
-            options={{
-                animation: "none",
+    return (
+        <Navigator
+            screenOptions={{
+                headerShown: false,
+                contentStyle: {
+                    backgroundColor: "red"
+                }
             }}
+        >
+            <Screen
+                name={AppNavScreenList.BOTTOM_TAB_NAV}
+                component={TabsNavigator}
+                options={{
+                    animation: "none",
+                }}
             />
+
+            <Screen
+                name={AppNavScreenList.HOME_SCREEN}
+                component={TabsNavigator}
+                options={{
+                    animation: "none",
+                }}
+            />
+             <Screen
+                name={AppNavScreenList.DETAILS_SCREEN}
+                component={TabsNavigator}
+                options={{
+                    animation: "none",
+                }}
+            />
+             <Screen
+                name={AppNavScreenList.PROFILE_SCREEN}
+                component={TabsNavigator}
+                options={{
+                    animation: "none",
+                }}
+            />
+
+
+
         </Navigator>
     )
 }
