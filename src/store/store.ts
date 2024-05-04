@@ -3,7 +3,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 import { persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist'
 import autoMergeLevel1 from 'redux-persist/lib/stateReconciler/autoMergeLevel1'
 
-import rootReducer, { RootReducerType } from 'src/store/rootReducer';
+import rootReducer, { RootReducerType } from './rootReducer';
 
 // Persistence config
 const persistenceConfig = {

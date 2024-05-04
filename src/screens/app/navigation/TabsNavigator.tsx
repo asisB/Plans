@@ -8,9 +8,9 @@ import HomeScreen from "../home/HomeScreen";
 import DetailsScreen from "../details/DetailsScreen";
 import  colors  from "theme/colors.theme";
 
-const home = require("src/assets/icons/home.png") as ImageSourcePropType;
-const profile = require("src/assets/icons/profile.png") as ImageSourcePropType; 
-const activity = require("src/assets/icons/activity.png") as ImageSourcePropType;
+import homeIcon from '../../../assets/icons/tab_home.png';
+import profile from '../../../assets/icons/tab_profile.png';
+import activity from '../../../assets/icons/tab_map.png';
 
 
 
@@ -33,7 +33,7 @@ const TabsNavigator = (): JSX.Element => {
             const style = focused ? styles.iconActive : styles.icon;
             switch (route.name) {
               case AppNavScreenList.HOME_SCREEN:
-                iconImage = <Image source={home} style={style} />;
+                iconImage = <Image source={homeIcon} style={style} />;
                 break;
               case AppNavScreenList.DETAILS_SCREEN:
                 iconImage = <Image source={activity} style={style} />;

@@ -14,5 +14,9 @@
                 "src/components/*"
             ],
         },
-    }
+    },
+    "include": [
+        "src/**/*",
+        "declarations.d.ts"
+      ]
 }

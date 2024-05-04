@@ -1,9 +1,10 @@
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState, useCallback } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import * as SplashScreen from "expo-splash-screen";
-import Providers from 'Providers';
-import Routes from "Routes"
+import Providers from "./src/Providers";
+import Routes from "./src/Routes";
 import * as Font from "expo-font";
 import {
   Roboto_400Regular,
