@@ -2,7 +2,7 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState, useCallback } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import * as SplashScreen from "expo-splash-screen";
+import SplashScreen from "./src/screens/auth/splash/SplashScreen";
 import Providers from "./src/Providers";
 import Routes from "./src/Routes";
 import * as Font from "expo-font";
@@ -18,7 +18,6 @@ export default function App() {
   useEffect(() => {
     async function prepare() {
       try {
-        await SplashScreen.preventAutoHideAsync();
         await Font.loadAsync({
           Roboto_400Regular,
           Roboto_700Bold,
@@ -35,18 +34,18 @@ export default function App() {
     prepare();
   }, []);
 
-  const onLayoutRootView = useCallback(async () => {
-    if (appIsReady) {
-      await SplashScreen.hideAsync();
-    }
-  }, [appIsReady]);
+  // const onLayoutRootView = useCallback(async () => {
+  //   if (appIsReady) {
+  //     await SplashScreen.hideAsync();
+  //   }
+  // }, []);
 
   if (!appIsReady) {
-    return null;
+    return <SplashScreen/>
   }
 
   return (
-    <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+    <View style={{ flex: 1 }}>
       <Providers>
         <Routes />
       </Providers>
