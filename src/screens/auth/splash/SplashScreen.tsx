@@ -3,11 +3,11 @@ import React, {useEffect} from 'react'
 
 export default function SplashScreen() {
   return (
-    <View style={{flex: 1, backgroundColor: "white"}}>
+    <View style={{flex: 1, justifyContent: 'center', alignItems: "center", backgroundColor: "white"}}>
         <Image style={{width: 200, height: 200}} source={require('../../../assets/images/background.png')}/>
         <View>
           <View style={{justifyContent: "center", alignItems: 'center'}}>
-          <Text style={styles.text}>Welcome {"\n"} To Your {"\n"} Personal Planner</Text>
+          <Text style={styles.text}>Welcome {'\n'}To Your{'\n'}Personal Planner</Text>
           </View>
         
         </View>

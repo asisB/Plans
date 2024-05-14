@@ -42,8 +42,8 @@ const ListItem = ({ item, index, x }: Props) => {
         );
         return {
             opacity,
-            width: SCREEN_WIDTH * 0.7,
-            height: SCREEN_WIDTH * 0.7,
+            width: SCREEN_WIDTH * 0.8,
+            height: SCREEN_WIDTH * 0.8,
             transform: [{ translateY }],
         };
     }, [index, x]);

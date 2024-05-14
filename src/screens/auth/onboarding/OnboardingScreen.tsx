@@ -21,15 +21,15 @@ import {
 
 const page = [
   {
-    text: "Thinking of making life better!{'\n'} Then How?",
+    text: "Thinking of\nMaking a life better! \nThen How?",
     image: require("../../../assets/images/think.png"),
   },
   {
-    text: "By making everyday list and making it habit! {'\n'} Is'nt it cool",
+    text: "Creating a daily list\nTurning it into a habit!\nSounds like a cool",
     image: require("../../../assets/images/todo.png"),
   },
   {
-    text: "Explaore more into you!{'\n'} Make Your life Better.",
+    text: "Explore more\ninto you!\nMake Your life Better.",
     image: require("../../../assets/images/explore.png"),
   },
 
