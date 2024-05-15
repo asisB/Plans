@@ -9,6 +9,9 @@ import Back from 'components/Back';
 import colors from 'theme/colors.theme';
 import Typography from 'components/Typography';
 import InputField from 'components/InputField';
+import CheckButton from 'components/CheckButton';
+import LinkButton from 'components/LinkButton';
+import LoadingView from 'components/LoadingView';
 
 interface ILoginScreen {
   navigation: StackNavigationProp<
@@ -46,15 +49,20 @@ const LoginScreen = ({ navigation, route }: ILoginScreen) => {
               value={emailAddress || ""}
               placeholder='Email Address'
               onChangeText={(em) => setEmailAddress(em)}
-            >
-
-            </InputField>
+            />
+              <InputField
+              label="Enter password"
+              value={password || ""}
+              placeholder="Password"
+              secureTextEntry={true}
+              onChangeText={(em) => setPassword(em)}
+            />
           </View>
-
-
+          <CheckButton title="Login" onPress={onLoginPress} />
+          <LinkButton title='Already have an account?' onPress={onLoginPress} />
         </View>
       </KeyboardAwareView>
-
+      {isLoading && <LoadingView/>}
     </Screen>
   )
 }
